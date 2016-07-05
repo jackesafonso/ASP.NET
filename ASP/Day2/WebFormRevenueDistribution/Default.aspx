@@ -8,7 +8,7 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-    <center><h1>Calculating Revenue Distribution of Production and Share Agreement in Petroleum Industry</h1></center>
+    <center><h1>Calculating Revenue Distribution of Production Share Agreement in Petroleum Industry</h1></center>
 
     <br/>
 
@@ -95,7 +95,7 @@
               
            </div>
         <div class="col-sm-4">
-              <asp:Button ID="Button1" runat="server" Text="Click to Calculate Revenue Distribution" OnClick="Button1_Click"/>
+              <asp:Button ID="Button1" runat="server" Text="Calculate Revenue Distribution" OnClick="Button1_Click"/>
         </div>
     </div>
 
@@ -106,7 +106,11 @@
         <br />
         
         <asp:Label ID="LabelRecoveryCost" runat="server" Text=""></asp:Label>
+
+        <asp:Label ID="LabelEquatyToBeSplitted" runat="server" Text=""></asp:Label>
         
+       <%-- <asp:Label ID="LabelOilCompanyTaxableIncome" runat="server" Text=""></asp:Label>
+        <asp:Label ID="LabelGovernment" runat="server" Text=""></asp:Label>--%>
 
 
    </div> <!--closing container -->

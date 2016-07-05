@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 
 public partial class _Default : System.Web.UI.Page
 {
+    decimal EquatyToBeSplitted = 0;
+    decimal OilCompanyTaxableIncome = 0;
     decimal LabelProduction = 0;
     decimal AnnualProduction = 0;
     decimal RecoveryCost = 0;
@@ -26,6 +28,12 @@ public partial class _Default : System.Web.UI.Page
 
         RecoveryCost = Convert.ToDecimal(TextBoxOPex.Text);
         LabelRecoveryCost.Text = "The Project Recovery Cost is " + (RecoveryCost + Convert.ToInt32(TextBoxCapex.Text)).ToString();
+
+        //EquatyToBeSplitted = Convert.ToDecimal(LabelNetRevenue.Text);
+        //LabelEquatyToBeSplitted.Text = EquatyToBeSplitted  
+
+        //OilCompanyTaxableIncome = Convert.ToDecimal(LabelEquatyToBeSplitted.Text);
+        //LabelOilCompanyTaxableIncome = (OilCompanyTaxableIncome / Convert.ToDecimal(2.)).ToString(); 
     }
 }
 
