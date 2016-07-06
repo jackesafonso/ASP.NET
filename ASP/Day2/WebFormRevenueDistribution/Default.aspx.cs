@@ -12,7 +12,7 @@ public partial class _Default : System.Web.UI.Page
     decimal LabelProduction = 0;
     decimal AnnualProduction = 0;
     decimal RecoveryCost = 0;
-    //decimal labelNetRevenue = 0m;
+   // decimal labelNetRevenue = 0m;
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -29,8 +29,8 @@ public partial class _Default : System.Web.UI.Page
         RecoveryCost = Convert.ToDecimal(TextBoxOPex.Text);
         LabelRecoveryCost.Text = "The Project Recovery Cost is " + (RecoveryCost + Convert.ToInt32(TextBoxCapex.Text)).ToString();
 
-        //EquatyToBeSplitted = Convert.ToDecimal(LabelNetRevenue.Text);
-        //LabelEquatyToBeSplitted.Text = EquatyToBeSplitted  
+        //LabelNetRevenue.Text = EquatyToBeSplitted;
+        //LabelEquatyToBeSplitted.Text = (Convert.ToDecimal(EquatyToBeSplitted)).ToString();
 
         //OilCompanyTaxableIncome = Convert.ToDecimal(LabelEquatyToBeSplitted.Text);
         //LabelOilCompanyTaxableIncome = (OilCompanyTaxableIncome / Convert.ToDecimal(2.)).ToString(); 
