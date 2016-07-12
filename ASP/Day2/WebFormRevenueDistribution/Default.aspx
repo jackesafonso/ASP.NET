@@ -112,7 +112,17 @@
         <asp:Label ID="LabelEquatyToBeSplitted" runat="server" Text=""></asp:Label>
         <br />
         <asp:Label ID="LabelOilCompanyTaxableIncome" runat="server" Text=""></asp:Label>
+        <br />
         <asp:Label ID="LabelGovernmentIncome" runat="server" Text=""></asp:Label>
+        <br />
+
+        <asp:Label ID="LabelTaxx" runat="server" Text=""></asp:Label>
+        <br />
+        <asp:Label ID="LabelRoyaltyToBePaid" runat="server" Text=""></asp:Label>
+        <br />
+        <asp:Label ID="LabelGovernmentTake" runat="server" Text=""></asp:Label>
+        <br />
+        <asp:Label ID="LabelOilCompanyTake" runat="server" Text=""></asp:Label>
 
 
    </div> <!--closing container -->
