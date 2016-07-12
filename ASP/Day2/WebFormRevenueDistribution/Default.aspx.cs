@@ -19,11 +19,11 @@ public partial class _Default : System.Web.UI.Page
     decimal RoyaltyCost = 0;
     decimal GovernmentTake = 0;
     decimal OilCompanyTake = 0;
+    decimal ABC;
 
-   
 
 
-   // decimal labelNetRevenue = 0m;
+    // decimal labelNetRevenue = 0m;
 
 
     protected void Page_Load(object sender, EventArgs e)
@@ -87,13 +87,19 @@ public partial class _Default : System.Web.UI.Page
         RoyaltyCost = EquatyToBeSplitted;
         LabelRoyaltyToBePaid.Text = "The amount of Royalty to be paid to Government is £" + ((RoyaltyCost * Convert.ToDecimal(TextBoxRoyalty.Text))/DevidedByHundred).ToString();
 
-        ClientScript.RegisterStartupScript(GetType(), "draw", "draw('" + chartType + "','" + RecoveryCost + "')", true);
-
+       
         GovernmentTake = (GovernmentIncome / Convert.ToDecimal(DevidedByTwo));
-        LabelGovernmentTake.Text = "The total amount of Government benifits/Government take from the Project is £" + ((GovernmentTake + (((Tax * Convert.ToDecimal(TextBoxTax.Text)) / DevidedByHundred)) + ((RoyaltyCost * Convert.ToDecimal(TextBoxRoyalty.Text)) / DevidedByHundred))).ToString();
+         ABC = (GovernmentTake + (((Tax * Convert.ToDecimal(TextBoxTax.Text)) / DevidedByHundred))
+            + ((RoyaltyCost * Convert.ToDecimal(TextBoxRoyalty.Text)) / DevidedByHundred));
+        LabelGovernmentTake.Text = "The total amount of Government benifits/Government take from the Project is £" 
+            + ABC.ToString();
 
         OilCompanyTake = (OilCompanyTaxableIncome / Convert.ToDecimal(DevidedByTwo));
         LabelOilCompanyTake.Text ="The total amount that Oil Company benifits/Oil Company take from the project is £" + (GovernmentTake - ((Tax * Convert.ToDecimal(TextBoxTax.Text)) / DevidedByHundred)).ToString();
+
+        ClientScript.RegisterStartupScript(GetType(), "draw", "draw('" + chartType + "','" + RecoveryCost + "','" + ABC + "')", true);
+
+
     }
 
     public string getChartType()

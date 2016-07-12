@@ -125,6 +125,17 @@
         <asp:Label ID="LabelOilCompanyTake" runat="server" Text=""></asp:Label>
 
 
+        
+        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+        <asp:DropDownList ID="DropDownList1" runat="server">
+
+            <asp:ListItem Value="pie" Selected="True">Pie</asp:ListItem>
+                                <asp:ListItem Value="doughnut">Doughnut</asp:ListItem>
+                                <asp:ListItem Value="column">Column</asp:ListItem>
+                                <asp:ListItem Value="bar">Bar</asp:ListItem>
+        </asp:DropDownList>
+
+        
    </div> <!--closing container -->
 
 
@@ -139,14 +150,7 @@
 
         
         
-        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-        <asp:DropDownList ID="DropDownList1" runat="server">
-
-            <asp:ListItem Value="pie" Selected="True">Pie</asp:ListItem>
-                                <asp:ListItem Value="doughnut">Doughnut</asp:ListItem>
-                                <asp:ListItem Value="column">Column</asp:ListItem>
-                                <asp:ListItem Value="bar">Bar</asp:ListItem>
-        </asp:DropDownList>
+        
 
         
        
