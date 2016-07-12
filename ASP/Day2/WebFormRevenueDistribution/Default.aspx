@@ -6,6 +6,8 @@
 <head runat="server">
     <title>Revenue Distribution</title>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/canvasjs.min.js"></script>
+    <script src="Scripts/chartScript.js"></script>
 </head>
 <body>
     <center><h1>Calculating Revenue Distribution of Production Share Agreement in Petroleum Industry</h1></center>
@@ -106,11 +108,11 @@
         <br />
         
         <asp:Label ID="LabelRecoveryCost" runat="server" Text=""></asp:Label>
-
+        <br />
         <asp:Label ID="LabelEquatyToBeSplitted" runat="server" Text=""></asp:Label>
-        
-       <%-- <asp:Label ID="LabelOilCompanyTaxableIncome" runat="server" Text=""></asp:Label>
-        <asp:Label ID="LabelGovernment" runat="server" Text=""></asp:Label>--%>
+        <br />
+        <asp:Label ID="LabelOilCompanyTaxableIncome" runat="server" Text=""></asp:Label>
+        <asp:Label ID="LabelGovernmentIncome" runat="server" Text=""></asp:Label>
 
 
    </div> <!--closing container -->
@@ -127,10 +129,23 @@
 
         
         
+        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+        <asp:DropDownList ID="DropDownList1" runat="server">
 
+            <asp:ListItem Value="pie" Selected="True">Pie</asp:ListItem>
+                                <asp:ListItem Value="doughnut">Doughnut</asp:ListItem>
+                                <asp:ListItem Value="column">Column</asp:ListItem>
+                                <asp:ListItem Value="bar">Bar</asp:ListItem>
+        </asp:DropDownList>
 
         
        
     </form>
+
+
+
+    
+
+
 </body>
 </html>
